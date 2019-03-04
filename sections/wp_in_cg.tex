@@ -1,0 +1,41 @@
+\begin{frame}{\textit{ShortLex} Automatic Groups (\texttt{SAG}) (i)}
+
+\begin{definition}[$k$-fellow-traveler property]
+Two paths $\widehat{u}$ and $\widehat{v}$ in  $\Gamma(\mathcal{G},S)$ are said to satisfy the $k$-fellow-traveler property if they are at distance $k$, i.e. $d_\Gamma(\widehat{u},\widehat{v})$.
+\end{definition}
+
+\begin{definition}[\textit{ShortLex} Automatic Group]
+Let $\mathcal{G}=\left\langle S\right\rangle$ be a \texttt{SAG}, then every pair of \textit{shortlex} paths in $\Gamma(\mathcal{G},S)$ that begin at the same node and whose end nodes are adjacent satisfy the $k$-fellow-travel property.
+\end{definition}
+
+\end{frame}
+
+\begin{frame}{\textit{ShortLex} Automatic Groups (\texttt{SAG}) (ii)}
+
+\begin{fact}
+Let $\mathcal{G}=\left\langle S\right\rangle$ be a \texttt{SAG} with traveler constant $k$. Then, the geodesic paths between any pair of nodes in $\Gamma(\mathcal{G},S)$ are uniformly separated at distance $k$.
+\end{fact}
+
+\end{frame}
+
+\begin{frame}{The Word-difference Automaton (\texttt{WDA}) (i)}
+
+\begin{definition}[\texttt{WDs}]
+The set of Word-differences (\texttt{WDs}) of $\Gamma(\mathcal{G},S)$ is given by the labels of the nodes in $N(\Gamma,e_\mathcal{A})$, i.e.
+$$\mathbb{D}=\{w\in L:|w|\leq k\}.$$
+\end{definition}
+
+\end{frame}
+
+\begin{frame}{The Word-difference Automaton (\texttt{WDA}) (ii)}
+
+\begin{definition}[\texttt{WDA}]
+The \texttt{WDA} is a $2$-variable \texttt{FSA} over $\mathcal{A}$ denoted by \texttt{diff} and with state set given by $\mathbb{D}$. It accepts $(r,t)$, if and only if
+$\widehat{r}$ and $\widehat{t}$ satisfy that
+\begin{enumerate}
+    \item $d(\widehat{r},\widehat{t})\leq k$, and
+    \item $q^{(r(i),t(i))}\in \mathbb{D}$ is the \textit{shortLex} path from $\overline{r(i)}$ to $\overline{t(i)}$. 
+\end{enumerate}
+\end{definition}
+
+\end{frame}

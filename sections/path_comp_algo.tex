@@ -1,0 +1,67 @@
+\begin{frame}{Computing the shortest path (i)}
+
+Let $(r,t)$ be a tuple recognized by \textit{diff}, such that $r<_\mathcal{A} t$ and $q^{(r,t)}=e_\mathcal{A}$. Then paths $\widehat{r}$ and $\widehat{t}$ beginning at the same node satisfy that:
+\begin{enumerate}
+    \item $\widehat{r}$ and $\widehat{t}$ join the same pair of nodes.
+    \item $|\widehat{r}|\leq|\widehat{t}|$.
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Computing the minimal paths (i)}
+
+Let $(r,t)$ be a tuple recognized by \textit{diff}, such that $t\in L$, $r<_\mathcal{A}t$ and $q^{(r,t)}=e_\mathcal{A}$. Then paths $\widehat{r}$ and $\widehat{t}$ beginning at the same node satisfy that:
+\begin{enumerate}
+    \item $\widehat{r}$ and $\widehat{t}$ join the same pair of nodes.
+    \item $\widehat{r}$ and $\widehat{t}$ are minimal paths.
+    \item $d_\Gamma(\widehat{r},\widehat{t})\leq k$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Computing the minimal paths (ii)}
+
+\begin{lemma}[The set of minimal paths]
+Let $\widehat{w}$ be the \textit{shortLex} path between two nodes $\overline{u}$ to $\overline{v}$. The set of minimal paths from $\overline{u}$ to $\overline{v}$ that are at uniform distance $jk$ from $\widehat{w}$ is given by
+$$\mathbb{P}_{j}(w) =\{t\in \mathcal{F}(\mathcal{A}):\exists r \in \mathbb{P}_{j-1}(w),\textnormal{ s.t. } q^{(r,t)}\in e_\mathcal{A}\},$$
+
+where $j>0$ and $\mathbb{P}_0=\{w\}$.
+\end{lemma}
+
+\end{frame}
+
+\begin{frame}{Computing the minimal paths (iii)}
+
+\begin{corollary}[The set of minimal paths]
+Let $\widehat{w}$ be the \textit{shortLex} path from $\overline{u}$ to $\overline{v}$. The set of all the minimal paths from $\overline{u}$ to $\overline{v}$ is given by $\mathbb{P}_{\lceil D_\Gamma / k\rceil}$.
+\end{corollary}
+
+\end{frame}
+
+\begin{frame}{Computing all the paths (i)}
+
+Let $(r,t)$ be a tuple recognized by \textit{diff}, such that $r<_\mathcal{A}t$. Then paths $\widehat{r}$ and $\widehat{t}$ beginning at the same node satisfy that:
+\begin{enumerate}
+    \item $\widehat{t}$ and $\widehat{rq^{(r,t)}}$ join the same pair of nodes.
+    \item  $|rq^{(r,t)}| = |r|+|q^{(r,t)}|$, then $|\widehat{t}|\leq|\widehat{rq^{(r,t)}}| \leq |\widehat{t}|+k$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Computing all the paths (ii)}
+
+\begin{lemma}[The paths of bounded length]
+Let $\widehat{w}$ be the \textit{shortLex} path between two nodes $\overline{u}$ to $\overline{v}$. The set of paths from $\overline{u}$ to $\overline{v}$ with length at most $d_\Gamma(\overline{u},\overline{v})+ik$ is given by
+$$[w]_i =\{(rq^{(r,t)})_{red}\in \mathcal{F}(\mathcal{A}):\forall t \in [w]_{i-1}\},$$
+
+where $i>0$ and $[w]_0=\mathbb{P}_{\lceil D_\Gamma / k\rceil}(w)$.
+\end{lemma}
+
+\end{frame}
+
+\begin{frame}{Computing all the paths (iii)}
+
+\begin{corollary}
+[The set of all  paths]
+Let $\widehat{w}$ be the \textit{shortLex} path between two nodes $\overline{u}$ to $\overline{v}$. The set of all paths from $\overline{u}$ to $\overline{v}$ are given by the words in $[w]_{\lceil D_\Gamma / k\rceil}$.
+\end{corollary}
+
+\end{frame}
